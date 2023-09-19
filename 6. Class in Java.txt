@@ -1,0 +1,36 @@
+
+package PracticeFiles;
+
+/*	
+ 	A class is the blueprint or design which describes the characteristic and behavior of a real-word entity.
+	The below Class Student is the design which contain characteristics or attributes like name, rollNo
+	and behavior or methods like getDetailsOfStudent
+*/
+public class Student {
+	
+	public int rollNo ;
+	public String name ;
+	
+	public void setDetailsOfStudent(int r, String n) {		//	here, the arguments or parameters are called formal parameter.
+		rollNo = r ;
+		name = n ;
+	}
+	
+	public void getDetailsOfStudent() {
+		System.out.println("Roll No .: " + rollNo) ;
+		System.out.println("Name    .: " + name) ;
+	}
+	
+	
+	
+	public static void main(String [] args) {
+		Student student = new Student() ;		//	making the object of the above class.
+		
+		int rolls = 45 ;					
+		String names = "Himanshu" ;
+		
+		student.setDetailsOfStudent(rolls, names);		//	here, the arguments or parameters are called actual parameter.
+		
+		student.getDetailsOfStudent();			//	calling the method of class through object.
+	}
+}

@@ -1,0 +1,68 @@
+/*
+  	.sorted(), .sorted(Comparator.reverseOrder()) , .anyMatch() , .allMatch(), .noneMatch(), .findAny(), findFirst()
+ */
+
+package Learn;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+public class Main {
+public static void main(String [] args) {
+	
+	List<Integer> list1 = List.of(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 2, 3, 4, 7, 9, 0);
+	
+		//	want to sort the content of the collection.
+	List<Integer> sortedList = list1.stream().sorted().collect(Collectors.toList());
+	sortedList.forEach(e -> System.out.print(e + " "));
+	System.out.println();
+	
+		//	want to sort in reverse order.
+	List<Integer> reverseList = list1.stream().sorted(Comparator.reverseOrder()).collect(Collectors.toList()) ;
+	reverseList.forEach(e -> System.out.print(e + " "));
+	System.out.println() ;
+	
+		//	suppose we have another collection.
+	Set<String> fruits = new HashSet<String>();
+	fruits.add("Apple");
+	fruits.add("Pine Apple");
+	fruits.add("Orange");
+	fruits.add("Banana");
+	
+		//	want to search anything from a collection.
+	boolean found1 = fruits.stream().anyMatch(value -> { return value.startsWith("Pine");	}	);
+	System.out.println("Any fruit starts with Pine..? : " + found1) ;
+	
+	boolean allFruitsAreApple = fruits.stream().allMatch(value -> {	return "apple".equals(value);	}	);
+	System.out.println("All the fruits are apple..? : " + allFruitsAreApple) ;
+	
+	boolean nonFruitsAreMango = fruits.stream().noneMatch(value -> {return "Mango".equals(value);	}	);
+	System.out.println("none of the fruits are Mango..? : " + nonFruitsAreMango);
+	
+	Optional <String> findingAnyAvailableElement = fruits.stream().findAny();
+	System.out.println("Find any available fruit : " + findingAnyAvailableElement.get());
+		
+	Optional <String> findingFirstElement = fruits.stream().findFirst();
+	System.out.println("Find the first element : " + findingFirstElement.get() ); 
+
+	
+	
+	//	Want to concatinate 2 different collections ..?
+	List <String> list3 = Arrays.asList("A", "B") ;
+	List <String> list4 = Arrays.asList("C", "D") ;
+	
+	Stream stream1 = list3.stream() ;
+	Stream stream2 = list4.stream() ;
+	
+	List <String> finalList = (List<String>) Stream.concat(stream1, stream2).collect(Collectors.toList()) ;
+	finalList.forEach(e -> System.out.print(e + " "));
+	
+	
+	}
+}

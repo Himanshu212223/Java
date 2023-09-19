@@ -1,0 +1,38 @@
+/*
+	Calendar API :-
+	___________________________
+	
+	- It is used to fetch the data related to calendar.
+	- We can get the current details of the calendar, or can set the data for any date.
+*/
+
+package PracticeFiles;
+
+import java.util.Calendar;
+
+public class Calenders {
+	public static void main(String [] args) {
+		
+		Calendar cal = Calendar.getInstance() ;
+		
+		//	to get the complete details of today calendar.
+		System.out.println(cal) ;
+		
+		int hour = cal.get(Calendar.HOUR) ;
+		int minute = cal.get(Calendar.MINUTE) ;
+		int second = cal.get(Calendar.SECOND) ;
+		int date = cal.get(Calendar.DATE);
+		int month = cal.get(Calendar.MONTH) ;
+		int year = cal.get(Calendar.YEAR) ;
+		
+		System.out.println("Today's date is " + date + "-" + month + "-" + year + " , and"
+				+ "time is " + hour + ":" + minute + ":" + second) ;
+		
+		System.out.println(cal.getTime()) ;
+		
+		Calendar custom = Calendar.getInstance() ;
+		custom.set(2013, 1, 12);
+		
+		System.out.println(custom.getTime());
+	}
+}

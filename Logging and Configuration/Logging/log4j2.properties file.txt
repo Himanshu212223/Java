@@ -1,0 +1,40 @@
+name = PropertiesConfig
+property.filename = logs
+#	here, the filename is the folder in which the logged file will be stored.
+
+
+#	define where are the places, want to store the log details.
+appenders = console, file
+
+#	now, we have to define type, name, layout type, and layout pattern for each.
+
+#	appender details for console
+appender.console.type = Console
+appender.console.name = STDOUT
+appender.console.layout.type = PatternLayout
+appender.console.layout.pattern = %d{dd-MMM-yyyy HH:mm:ss} %level - %m%n
+
+
+#	appender details for logging in file.
+appender.file.type = File
+appender.file.name = LOGFILE
+appender.file.fileName = C:/${filename}/MyLogs.log
+# 	here, filename is same as mentioned in line2, and path name can be any path where you want to store the log data.
+appender.file.layout.type = PatternLayout
+appender.file.layout.pattern = %d{dd-MMM-yyyy HH:mm:ss} %level - %m%n
+
+#	now, we have to define logger, its file name(where, we gives our package), level, appenderReference, etc.
+
+#	define details for logger for logging in file.
+loggers = file
+logger.file.name = PracticeFiles
+#	here, we have given the name of package.
+logger.file.level = info
+logger.file.appenderRef = file
+logger.file.appenderRef.file.ref = LOGFILE
+
+
+#	now, define the details for logger.
+rootLogger.level = info
+rootLogger.appenderRefs = stdout
+rootLogger.appenderRef.stdout.ref = STDOUT

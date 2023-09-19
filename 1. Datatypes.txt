@@ -1,0 +1,122 @@
+
+package PracticeFiles;
+
+import java.lang.reflect.Array;
+import java.util.Arrays;
+
+public class DataTypes {
+	
+	public static void main(String [] args) {
+//		Primitive Datatypes
+
+		/*		They have their default values but we cannot print them without initialization 
+			because printing means we are using that variable and we cannot use any variable 
+			without initialization.
+			That means declaring a primitive variable without initialization is not a problem.
+			Using an uninitialized variable is a problem.
+		*/
+			//	Boolean type
+			boolean status ;
+			
+			//	Numerical type
+			byte b ;
+			char c ;
+			short s ;
+			int i ;
+			long l;
+			
+			//	Floating Type
+			float f;
+			double d;
+			
+			//	Initializing values to Primitive Datatypes :
+			boolean bool1 = true ;
+			byte b1 = 34 ;
+			short ss = 34 ;
+			char c1 = '3' ;
+			int i1 = 34 ;
+			long l1 = 34 ;
+			long l2 = 34L ;
+			long l3 = 34l ;
+			float f1 = 34 ;
+			float f2 = 34f ;
+			float f3 = 34F ;
+//			float f4 = 34.0 ;		//	ERROR
+			double d1 = 34 ;
+			double d2 = 34d ;
+			double d3 = 34D ;
+			double d4 = 34.0 ;
+			
+			System.out.println(bool1 +" " + b1+ " " +ss+ " " +c1+ " " +i1+ " " +l1+ " " +l2+ " " +l3+ " " +f1+ " " +f2+ " " +f3+ " " +d1+ " " +d2+ " " +d3+ " " +d4);
+			
+//			Non-Primitive Datatypes or wrapper class
+			Boolean boolean1 ;
+			Byte byte1 ;
+			Short short1 ;
+			Character char1 ;
+			Integer integer = new Integer(34);
+			Float float1 ;
+			String string = new String();
+			Long long1 ;
+			Double double1;
+			
+			
+			//	Different ways to declare arrays
+			int arr0[];
+			int arr1[] = {1, 2, 3, 4, 5};
+			int [] arr2 = {1, 2, 3, 4, 5};
+			int arr3[] = new int[5] ;
+			int arr4 [] = null ;
+			
+			//	Java also have inbuilt Arrays class which have inbuilt methods to make our task easy.
+			//	Some examples are :
+			boolean result = Arrays.equals(arr1, arr2) ;
+			int existanceOf4 = Arrays.binarySearch(arr1, 4) ;
+			Arrays.sort(arr1);
+			
+			
+			//	var datatype convert itself according to the initialized value.
+			var number = 11 ;
+			var character = 'h' ;
+			
+			
+			System.out.println();
+			
+			/*
+			 Note :-
+			 _____________
+			 
+			 There are 2 ways to compare Strings, (by using == sign or using .equals() method).
+			 	
+			 	== symbol not only compares the content of the variable, but also compares the reference value.
+			 	
+			 	equals method just compare the content of the variable.
+			 	
+			 	
+			*/
+			
+			String s1 = "Hii" ;
+			String s2 = "Hii" ;
+			String s3 = new String("Hii") ;
+			String s4 = new String("Hii") ;
+			
+			System.out.println(s1 == s2) ;
+			System.out.println(s1.equals(s2) ) ;
+			
+			System.out.println(s1 == s3) ;
+			System.out.println(s1.equals(s3) ) ;
+			
+			System.out.println(s3 == s4) ;
+			System.out.println(s3.equals(s4)) ;
+			
+			
+			
+			//	Enumerate or Enum
+			enum Directions {NORTH, SOUTH, EAST, WEST} ;
+			Directions direction = Directions.EAST;
+			System.out.println("The direction is : " + direction) ;
+			System.out.println("The direction is : " + direction.ordinal()) ;	//	will return int value.
+			
+	}
+	
+}

@@ -1,0 +1,40 @@
+
+/*
+  	Object Class :-
+  	_____________________
+  	
+  	Every class in Java is directly or indirectly derived from the Object class. 
+  	If a class does not extend any other class then it is a direct child class of Object 
+  	and if extends another class then it is indirectly derived. Therefore the Object class 
+  	methods are available to all Java classes. Hence Object class acts as a root of the 
+  	inheritance hierarchy in any Java Program.
+  	
+  	Various Predefined Methods of objects are :-
+  	1. equals()   : It compares objects through memory address. We can override as per requirement.
+  	2. hashCode() : It generates 32-bit integer hash value using object's data. It derives hash value according to memory address.
+  	3. toString() : It will return a string value of the object.
+  	4. getClass() : It will return the class detail.
+  	
+  	
+  	For proper usage of equals method, the different objects should have same hashCode.
+  	So, if the object's parameters have same value, and hashCode() also gives same value,
+  	then, equals() will return true.	
+	toString will return string consists of name of class of object, followed by hexadecimal 
+	hashcode of object.
+
+ */
+
+package PracticeFiles;
+
+public class ObjectClass {
+	public static void main(String [] args) {
+		Object object = new Object() ;
+		
+		Object obj = new Object() ;
+		
+		System.out.println(object.hashCode());		
+		System.out.println(object.toString()) ;
+		System.out.println(object.equals(obj)) ;
+		System.out.println(object.getClass()) ;
+	}
+}
