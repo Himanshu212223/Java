@@ -1,0 +1,91 @@
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::: Persistence Layer :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+@Entity
+_________
+
+- This is class level annotation, used to make a class acts as Table.
+
+
+@Table ( name = " Table_Name " )
+_________________________________
+
+- It is also a class level annotation, used to present the name of the Table.
+
+
+@Id
+_____
+
+- This is variable level annotation, used to represent the Primary Key of the table.
+
+
+@Column ( name = " column_Name " )
+____________________________________
+
+- This is variable level annotaion, used to represent the column of the relation.
+
+
+
+@GeneratedValue
+_________________
+
+- It is Variable level annotation.
+
+- This is used to automatically generate the value of primary key.
+
+- But, to use this, we have to write auto_increment in the sql command with paimary key to make this thing work.
+
+- The various examples are :
+  _______________________________
+
+@GeneratedValue ( strategy = GenerationType.IDENTITY )
+
+@GeneratedValue ( strategy = GenerationType.TABLE )
+
+@GeneratedValue ( strategy = GenerationType.SEQUENCE )
+
+@GeneratedValue ( strategy = GenerationType.AUTO )
+
+
+
+Cascade Relationship between tables :
+_______________________________________
+
+@OneToOne(cascade = CascadeType.ALL)
+
+@JoinColumn(name = " foreign_Key_Name ", unique = true )
+
+Ex : 
+_____
+
+@Entity
+public class Customer {
+	@Id
+	@GeneratedValue(strategy=GenerationType.IDENTITY)
+	private Integer customerId;
+	private String emailId;
+	private String name;
+	private LocalDate dateOfBirth;
+	@OneToOne(cascade = CascadeType.ALL)
+	@JoinColumn(name = "address_id", unique = true)
+	private Address address;
+	//getter and setter
+}
+
+
+
+
+Similarly :-
+______________
+
+@ManyToOne(cascade = CascadeType.ALL)
+
+@JoinColumn(name = " foreign_Key_Name ", unique = true )
+
+
+
+@OneToMany(cascade = CascadeType.ALL)
+
+@JoinColumn(name = " foreign_Key_Name ", unique = true )

@@ -1,0 +1,95 @@
+Dependencies Needed :-
+______________________________
+
+<dependency>
+     <groupId>org.springframework.boot</groupId>
+     <artifactId>spring-boot-starter-web</artifactId>
+</dependency>
+
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-devtools</artifactId>
+    <optional>true</optional>
+</dependency>
+
+
+
+Also, Mention at which post we want to host the backend by putting this in application.properites file.
+_______________________________________________________
+
+server.port = 3456
+
+
+The site can be view using http://localhost:3456/WebsiteName/particularThing
+
+
+Annotations :-
+______________________
+
+
+@RestController
+@RequestMapping(value = " /WebsiteName ")
+_____________________________________________
+
+- These are class level annotations which is used to make the method act according to REST API and to establish base website.
+
+
+@GetMapping(value = "/customers")
+______________________________________
+
+- This is method level annotation used to provide to execute the exact method when get request is called.
+
+- The method return type should be of ResponseEntity< return Type > and should return the value as ResponseEntity<>( Return_Type, HttpStatus.VALUE ) ;
+
+- Example :
+  _____________
+
+@GetMapping(value = "/customers")
+
+public ResponseEntity<List<CustomerDTO>> getAllCustomers() throws InfyBankException {
+	List<CustomerDTO> customerList = customerService.getAllCustomers();
+	return new ResponseEntity<>(customerList, HttpStatus.OK);
+}
+
+
+
+Global Example :-
+_________________________
+
+@RestController
+@RequestMapping(value = "/infybank")
+public class CustomerAPI {
+    @Autowired
+    private CustomerService customerService;
+    @Autowired
+    private Environment environment;
+    @GetMapping(value = "/customers")
+    public ResponseEntity<List<CustomerDTO>> getAllCustomers() throws InfyBankException {
+        List<CustomerDTO> customerList = customerService.getAllCustomers();
+        return new ResponseEntity<>(customerList, HttpStatus.OK);
+    }
+    @GetMapping(value = "/customers/{customerId}")
+    public ResponseEntity<CustomerDTO> getCustomer(@PathVariable Integer customerId) throws InfyBankException {
+        CustomerDTO customer = customerService.getCustomer(customerId);
+        return new ResponseEntity<>(customer, HttpStatus.OK);
+    }
+    @PostMapping(value = "/customers")
+    public ResponseEntity<String> addCustomer(@RequestBody CustomerDTO customer) throws InfyBankException {
+        Integer customerId = customerService.addCustomer(customer);
+        String successMessage = environment.getProperty("API.INSERT_SUCCESS") + customerId;
+        return new ResponseEntity<>(successMessage, HttpStatus.CREATED);
+    }
+    @PutMapping(value = "/customers/{customerId}")
+    public ResponseEntity<String> updateCustomer(@PathVariable Integer customerId, @RequestBody CustomerDTO customer)
+            throws InfyBankException {
+        customerService.updateCustomer(customerId, customer.getEmailId());
+        String successMessage = environment.getProperty("API.UPDATE_SUCCESS");
+        return new ResponseEntity<>(successMessage, HttpStatus.OK);
+    }
+    @DeleteMapping(value = "/customers/{customerId}")
+    public ResponseEntity<String> deleteCustomer(@PathVariable Integer customerId) throws InfyBankException {
+        customerService.deleteCustomer(customerId);
+        String successMessage = environment.getProperty("API.DELETE_SUCCESS");
+        return new ResponseEntity<>(successMessage, HttpStatus.OK);
+    }
+}

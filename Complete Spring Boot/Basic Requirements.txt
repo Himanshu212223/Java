@@ -1,0 +1,7 @@
+- For Every data flow, use Data Transfer Objects DTOs.
+
+- Make a utility class for AOPs.
+
+- Make a Exception class to handle all the exception there.
+
+- Make Inerface of every Service class.

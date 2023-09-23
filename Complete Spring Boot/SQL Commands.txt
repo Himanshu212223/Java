@@ -1,0 +1,61 @@
+CREATE TABLE Students (
+	SrNo INT PRIMARY KEY ,
+	Name VARCHAR(20)
+) ;
+
+
+CREATE TABLE Addresses (
+	SrNo INT PRIMARY KEY,
+	Address VARCHAR(20),
+	FOREIGN KEY (SrNo) REFERENCES Students(SrNo)
+);
+
+INSERT INTO Students VALUES (1, "Anubhav");
+INSERT INTO Students VALUES (2, "Himanshu");
+
+INSERT INTO Addresses VALUES (1, "Allahabad");
+INSERT INTO Addresses VALUES (2, "LucknoW");
+
+SELECT * FROM Students s INNER JOIN Addresses a ON s.SrNo = a.SrNo ;
+
+
+show databases ;
+
+create database myStudents ;
+
+
+CREATE TABLE Student (
+	RollNo INT PRIMARY KEY,
+	Name VARCHAR(20),
+	Code INT,
+	FOREIGN KEY (Code) REFERENCES School(Code)
+);
+
+CREATE TABLE SCHOOL (
+	Code INT PRIMARY KEY ,
+	Address VARCHAR(20)
+);
+
+INSERT INTO Student VALUES (1, "Anubhav", 101);
+INSERT INTO Student VALUES (2, "Himanshu", 101);
+INSERT INTO Student VALUES (3, "Sandeep", 102);
+
+INSERT INTO School VALUES (101, "LKO");
+INSERT INTO School VALUES (102, "Pakistan");
+
+SELECT * FROM Student s INNER JOIN School c ON s.Code = c.Code where s.Code == 101 ;
+
+
+
+
+CREATE TABLE Students (
+	id INT PRIMARY KEY ,
+	Name VARCHAR(20)
+) ;
+
+
+CREATE TABLE Addresses (
+	code INT PRIMARY KEY,
+	city VARCHAR(20),
+	FOREIGN KEY (code) REFERENCES Students(id)
+);

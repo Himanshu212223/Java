@@ -1,0 +1,41 @@
+Dependencies are :
+__________________
+
+<dependency>
+   <groupId>org.springframework.boot</groupId>
+   <artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+
+
+
+
+
+Validation Annotations :-
+____________________________
+
+Note :-
+_______
+
+@Valid is the Annotation which is used in the method argument to check the condition 
+
+
+Others are :-
+___________
+
+@NotNull ( message = " " )
+@Null
+@Max
+@Min
+@Email ( message = " " )
+@NotEmpty
+@NotBlank
+@Pattern (regexp = " regex here" ,  message = " " )
+@Past
+@PastOrPresent
+@Future
+@FutureOrPresent
+@Size
+
+- These all are variable level annotation is used in DTOs or where you want to check the condition.
+
+- The messages can be passed directly or can be stored in ValidationMessage.properties.

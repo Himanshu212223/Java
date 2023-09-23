@@ -1,0 +1,69 @@
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::: Spring Data Framework ::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+- Spring Data Framework is used to reduce the work of JPQL (writing queries and executing) as it provides the auto-implementation of the Queries.
+
+- We just have to extend the CrudRepository < entity_Class_name, Primary_Key_DataType > on any interface.
+
+
+Methods to Handle Data from Repository :-
+
+(these below methods are used with the object of repository class / interface which extends CrudRepository )
+
+
+
+Create Operation :
+__________________
+
+- save ( entity_class_object_name )
+
+
+
+Read Operation :
+________________
+
+- findById ( primary_key )
+
+- findAll ( ) 			//	no any argument needed.
+
+
+
+Update Operation :
+__________________
+
+- There is no as such method for update, just find that row and then update the required changes in the entity object only, it will auto-update in Table.
+
+
+
+Delete Operation :
+__________________
+
+- deleteById ( primary_key ) 
+
+
+
+For Operation based on non-Primary Keys, we use the Query Approach :-
+__________________________________________________________________
+
+- Here, instead of writing query, we give the name of methods 
+
+- Methods name should begins with :- findBy , getBy , readBy , countBy , or queryBy .
+
+- The further name is followed by search criteria is specified using attribute name of entity class and some specified keywords .
+
+- Conditions are applied using And , Or keywords.
+
+- Ex :
+
+findByEmailId (String email)
+
+findByLastName (String lastName)
+
+List<Customer> findFirst5ByEmailId(String emailId);
+
+List<Customer> findTop5ByByEmailId(String emailId);
+
+- OrderBy and First or Top can also be used .
