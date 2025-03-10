@@ -6,7 +6,7 @@
  	2. List :-
 	________________
 	
-	- List is ordered collection of unique elements.
+	- List is ordered collection of elements.
 	- List Interface can have 2 different classes as, ArrayList and LinkedList.
 	- ArrayList provides random access, hence, fast but, removal of element takes time.
 	- LinkedList provides sequential access from from front or rear, hence slow, but removal of element is easy.
