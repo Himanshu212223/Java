@@ -19,6 +19,12 @@ __________________
 
 
 
+Now you can download the mysql server locally using link - https://dev.mysql.com/downloads/installer/
+
+Now, find the MySQL server downloaded file from C://ProgramFiles etc and store it on System Environment Variables.
+
+then open cmd and use " mysql -u root -p " command to open the server.
+
 
 
 In Application.properties file (to configure Database) : 
