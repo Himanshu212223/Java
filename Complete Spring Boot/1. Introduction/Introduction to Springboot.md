@@ -46,7 +46,7 @@ Here's what the configuration could look like.
 
 ![Spring Boot Initializr](springbootinitializr.png)
 
-Click on **Generate** button and it will get downloaded on your pc.
+Click on **Generate** button and it will get downloaded on your pc, extract the file and import it as existing maven project on your IDE like Eclipse.
 
 
 #### What is Maven ..?
