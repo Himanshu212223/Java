@@ -49,8 +49,8 @@ Since Spring Boot follow ORM (Object Relation Model), it consider the Relation (
 So, create a Class with name same as the Relation (Table) name you need and create the Class attributes with the same name as the column name.
 
 ### How to mention Class as Entity
------------------------------------------------------------------------
-
+  
+  
 To declare a Class as an entity, use the below annotation.
 
 ```
@@ -66,13 +66,13 @@ import jakarta.persistence.Entity;
 
 
 ### How to mention a Column as Primary Key
------------------------------------------------------------------------
 
 To make a column as Primary Key, use the below Annotation.
 
 ```
 @Id
 ```
+
 -   It is an attribute level annotation to mark the column as *Primary Key*.
 -   It should be imported from below library-
 
@@ -83,7 +83,8 @@ import jakarta.persistence.Id;
 
 -------------------------------------------------------------------------
 
-### How to Install MySQL
+### How to Install MySQL 
+
 We can download the mysql server locally using link - https://dev.mysql.com/downloads/installer/
 
 Now, find the MySQL server downloaded file from `C:\Program Files\MySQL\MySQL Server 8.0\bin` etc, copy the file location and store it on System Environment Variables path.
