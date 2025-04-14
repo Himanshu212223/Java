@@ -6,6 +6,24 @@ Spring Boot is a framework built on top of the Spring Framework that makes it su
 - **Spring Boot -** Spring + Auto Configuration + Built-in Server = Quick Setup & Fast Development
 
 
+## Difference between Spring and Spring Boot ..?
+
+|Feature / Concept   |	Spring Framework    |	Spring Boot     |
+|--------------------|----------------------|-------------------|
+|Setup/Configuration    |	Manual — You configure everything (XML or Java-based)   |	Auto-configured — Minimal setup needed  |
+|Startup Time   |	Slower — More boilerplate and external setup    |	Faster — Built-in server and auto-configuration |
+|Embedded Server    |	Not included — You must deploy to a server like Tomcat or Jetty |	Comes with embedded servers like Tomcat, Jetty, or Undertow |
+|Project Structure  |	You define everything from scratch	|   Convention over configuration — Uses opinionated defaults   |
+|Build Tool |	Typically used with Maven/Gradle    |	Also uses Maven/Gradle but includes Spring Initializr to generate project templates |
+|Main Use Case  |	Gives you a flexible foundation to build anything   |	Great for quickly building microservices, REST APIs, or standalone apps |
+|Configuration Files    |	XML or Java Config (more verbose)   |	Mostly Java-based, with annotations and minimal config  |
+|Dependencies   |	You manually include dependencies like web, JPA, etc.   |	Uses starter dependencies (e.g., spring-boot-starter-web)   |
+|Target Audience    |	Advanced or complex enterprise setups where fine-tuned control is needed    |	Developers who want to get up and running fast  |
+
+
+
+
+
 ## Why Use Spring Boot..?
 1. No Boilerplate Setup is needed to manually configure things like: Tomcat server, Data sources, Dependencies.
 2. It comes with built-in Tomcat, so you don’t need to deploy WAR files to external servers.
