@@ -177,13 +177,9 @@ Transacation Management is used to make the database consistency with the entity
 -   It should be used at the **Service Layer** where we are using the custom logic to perform options on the entity.
 
 
-# Approach to define Repository
+# Define Repository
 
-There are many approaches to use the Repository to perform storage, retrieval and search of data from entity.
-
-1. Entity Manager
-2. Using CrudRepository (preferred)
-
+We usually use Entity Manager to define the Repository.
 
 ## 1. Entity Manager
 
@@ -202,3 +198,13 @@ This Annotation should be used while using the EntityManager.
 ```
 
 -   This Annotation should be used in either Repository or on Service Layer.
+
+Below are the few methods which can be used with Entity Manager-
+
+1. To Create / Add row on table - entityManager.persist ( entityObject )
+
+2. To Read data - entityManager.find ( EntityClass.class , id )
+
+3. To Update data on entity - entityManager.merge ( entityObject )
+
+4. To Delete data from entity - entityManager.remove ( entityObject )
