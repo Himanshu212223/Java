@@ -18,3 +18,8 @@ So, to Define the Class of Service Layer, we uses -
 
 -   It is a class Level Annotation.
 -   It is used to mark the class as Component so that it gets added on IoC Container and can easily interacts with Presentation Layer (API Layer) and other layers. 
+
+This Annotation should be imported from-
+```
+import org.springframework.stereotype.Service;
+```
