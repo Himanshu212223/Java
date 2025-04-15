@@ -1,4 +1,4 @@
-# Object Relational Mapping
+# Object Relational Mapping (ORM)
 
 Object Relational Mappling was introduced to map the Java Objects (of class) to Relation (Tables) so that the object model can be automatically translated to relation model and vice versa.
 
@@ -85,9 +85,11 @@ To mark a Java Class as Entity, we use below Annotation.
 - It is a Class level Annotation to mark the class as Entity.
 
 
+
+
 ### 2. Annotation to Define Table
 
-> Optional - It is only required if your Table Name and Entity Class name is different.
+> ⚠️ Optional - It is only required if your Table Name and Entity Class name is different.
 
 It specifies the table with which the entity Class is mapping.
 
@@ -111,7 +113,7 @@ To declare a identifier or variable of the Class as *Primary Key* we uses below 
 
 ### 4. Annotation to Define Columns
 
-> Optional - It is only needed if your Entity Class variable name is different from the Table Column name.
+> ⚠️ Optional - It is only needed if your Entity Class variable name is different from the Table Column name.
 
 It specifies the column with which we want to map the Class variable.
 
@@ -126,6 +128,7 @@ It specifies the column with which we want to map the Class variable.
 
 This annotation is used to define the attribute which need not to be saved on the Table.
 
+> ⚠️ Optional - It is only required when we are creating a variable on the Entity class but doesn't want to store it on Table.
 
 ```
 @Transient
@@ -134,6 +137,8 @@ This annotation is used to define the attribute which need not to be saved on th
 - It is also a field or variable level annotation.
 
 ### 6. Annotation to define Enumerated column
+
+> ⚠️ Optional - Use it when you are using Enum data to be stored on the Table.
 
 Suppose we have a column and we want to store a Enum value to it.
 
@@ -163,8 +168,37 @@ public class Employee {
 
 Transacation Management is used to make the database consistency with the entity and prevent the database get corrupted.
 
+**We should always use this Annotation.**.
+
 ```
 @Transactional
 ```
 -   It is a Class Level Annotation.
 -   It should be used at the **Service Layer** where we are using the custom logic to perform options on the entity.
+
+
+# Approach to define Repository
+
+There are many approaches to use the Repository to perform storage, retrieval and search of data from entity.
+
+1. Entity Manager
+2. Using CrudRepository (preferred)
+
+
+## 1. Entity Manager
+
+EntityManager is a core part of JPA (Java Persistence API) and is used to interact directly with the persistence context and the database.
+
+### Annotation for Entity Manager
+
+```
+@PersistenceContext
+```
+This Annotation should be used while using the EntityManager.
+
+```
+	@PersistenceContext
+	private EntityManager entityManager ;
+```
+
+-   This Annotation should be used in either Repository or on Service Layer.
