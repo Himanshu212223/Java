@@ -4,15 +4,15 @@
 
 ### Basics
 
-1. Architecture of Java
-2. Java DataTypes
-3. Basic Control Flow (if-else, switch, Loop)
+1. [Architecture of Java](./J_00_Java%20Architecture.md)
+2. [Java DataTypes](./J_02_0_Datatypes.java) and its [conversion](./J_02_1_DataTypeConversion.java)
+3. [Basic Control Flow](./J_03_0_ControlFlowStatements.java) (if-else, switch, Loop)
 
 ### Core Programming Concepts
 
 4. Arrays and Strings
-5. Methods and Method Overloading
-6. Variable Argument Methods
+5. [Methods and Method Overloading](./J_05_0_MethodOverloading.java)
+6. [Variable Argument Methods](./J_06_0_VariableArgumentMethod.java)
 7. Introduction to OOP concepts
 
 ### Object-Oriented Programming

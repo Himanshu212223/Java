@@ -13,7 +13,11 @@
 	- Constructor can also be overloaded.
 	
 	- Java main method can be overloaded as well.
-		But it will treate other main method as normal method.
+		1. But it will treate other main method as normal method.
+		2. If we run the code, it will still call the actual main method which have String[] args
+			or String args[] as a parameter.
+		3. We can call other overloaded method on the actual main method just like any normal
+			method.
 									 
 */
 
@@ -48,11 +52,15 @@ public class J_05_0_MethodOverloading {
 	//	Overloading Main Method as well.
 	public static void main(int a) {
 		System.out.println(a);
+
+		// We can call this method on the actual main method like - main(34) ;
 	}
 	
 	//	Overloading Main Method as well.
 	public static void main(String a) {
 		System.out.println(a);
+
+		// We can call this method on the actual main method like - main("Woow") ;
 	}
 	
 }

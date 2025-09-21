@@ -50,6 +50,19 @@ public class Hello {
 
 6. Runtime Execution :- Managed by JVM, with memory managed by Garbage Collector (GC).
 
+> ## javac vs JIT Compiler
+> ### javac (Java Compiler)
+> - Converts Java source code (.java) → bytecode (.class).
+> - Happens once before execution.
+> - Ensures code is syntactically and semantically correct.
+>
+> ### JIT (Just-In-Time Compiler)
+> - Converts bytecode → native machine code (CPU instructions).
+> - Happens at runtime while program is running.
+> - Improves performance by avoiding repeated interpretation.
+
+
+
 
 ## JVM Architecture (Internal Components)
 
@@ -61,7 +74,7 @@ public class Hello {
 
 - Stack :- Stores method calls and local variables (one stack per thread).
 
-- PC Register :- Tracks current instruction of execution.
+- PC(Program Counter) Register :- Tracks current instruction of execution.
 
 - Execution Engine :- Interpreter (Line-by-line execution) and JIT Compiler (Converts frequently-used bytecode to machine code)
 
@@ -96,9 +109,9 @@ The Heap is where most memory management occurs and is split into generations:
 
 ### 3. Lifecycle of an Object in Java
 
-1. Object creation using new → stored in Eden (Young Gen).
+1. Object creation using new → stored in Eden (Young Generation where new objects get created).
 
-2. Minor GC cleans Eden; surviving objects go to Survivor Space.
+2. Minor GC (Garbage Collection) cleans Eden, surviving objects go to Survivor Space.
 
 3. If they survive multiple GCs → moved to Old Gen.
 
@@ -115,7 +128,25 @@ Garbage collection automatically removes unused objects to free up heap space. T
 
 - Major/Full GC (Old Gen + Young Gen)
 
-- G1 GC, ZGC, and others optimize collection time and pauses.
+- G1GC, ZGC, and others optimize collection time and pauses.
+
+> ## G1 GC vs ZGC
+> ### What is G1 GC (Garbage-First Garbage Collector)?
+>
+> - Introduced in Java 7 (JDK 7u4), became default in Java 9.
+> - Heap is divided into regions (instead of just Eden, Survivor, Old).
+> - Collects garbage region by region, focusing first on regions with most garbage ("garbage-first").
+> - Goal: low pause times and good throughput.
+> - Works well for large heaps (multi-GB).
+> - 👉 Example: If you have a 4GB heap, G1 splits it into ~2000 regions and cleans them in parallel.
+>
+> ### What is ZGC (Z Garbage Collector)?
+> 
+> - Introduced in Java 11.
+> - Designed for very large heaps (TB scale).
+> - Provides extremely low pause times (typically <10ms).
+> - Uses colored pointers and load barriers to manage memory without stopping the application much.
+> - Scales very well for applications that need real-time responsiveness.
 
 
 ### 5. Memory Management Summary
