@@ -22,7 +22,7 @@ JRE provides the JVM + core libraries (like java.lang, java.util, etc.) needed t
 
 ## How Java Works (Behind the Scenes)
 
-![architecture](architecture.png)
+![architecture](./Screenshots/architecture.png)
 
 Here's the step-by-step flow:
 
@@ -128,7 +128,7 @@ Garbage collection automatically removes unused objects to free up heap space. T
 | Native memory |	JVM + OS |
 
 
-![memory](memory.png)
+![memory](./Screenshots/memory.png)
 
 
 
@@ -158,4 +158,4 @@ When you create an object using new, it’s stored in the Heap Memory.
 
 5. Compact Phase (optional) :- After deletion, GC may rearrange remaining objects to reduce fragmentation.
 
-![garbage collection](garbage_collection.png)
+![garbage collection](./Screenshots/garbage_collection.png)
