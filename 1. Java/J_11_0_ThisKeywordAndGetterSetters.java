@@ -4,7 +4,7 @@
 	_______________________
 	
 	Sometimes, when the class attribute have same name as that of formal parameter of methods of the class.
-	So, to it is better to use the class attribute referred through this keyword.
+	So, it is better to use the class attribute referred through this keyword.
 	
 	This keyword is always used inside the class only, and is used to refer that the attribute 
 	belongs to this class only.

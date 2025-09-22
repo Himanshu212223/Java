@@ -9,7 +9,7 @@
 	- extends is used to perform Inheritance.
 
 	- Java follows Single level, Multi-level, and Hierarchical Inheritance 
-		(multiple classes can extends on class).
+		(multiple classes can extends one class).
 	
 	- Java does not support Multiple Inheritance (a child class cannot extend 2 or more parent class).
 */
