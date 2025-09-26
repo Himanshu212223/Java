@@ -7,7 +7,8 @@
 
 	- They can be used with or without object.
 	
-	- Static Block gets executed once the class get executed, even before constructor.
+	- Static Block gets executed once the class get executed while creating the object, 
+		even before constructor call.
 		This is only applicable when we are creating the object of that class.
 	
 	- Static variable or methods can be used directly through Class name if that member is not private.

@@ -11,7 +11,7 @@
 ### Core Programming Concepts
 
 4. Arrays and Strings
-5. [Methods and Method Overloading](./J_05_0_MethodOverloading.java)
+5. [Methods and Method Overloading - Static Polymorphism](./J_05_0_MethodOverloading.java)
 6. [Variable Argument Methods](./J_06_0_VariableArgumentMethod.java)
 7. [Introduction to OOP concepts](./J_07_0_Introduction%20to%20OOPs.md)
 
@@ -22,16 +22,16 @@
 10. [Singleton Class](./J_10_0_SingletonClass.java) and Anonymous Class
 11. [This Keyword, Getters and Setters](./J_11_0_ThisKeywordAndGetterSetters.java)
 12. [Inheritance](./J_12_0_Inheritance.java), [Super Keyword and Access Modifiers](./J_12_1_SuperKeywordAndAccessModifier.java)
-13. Static and Final Keywords
-14. Method Overriding or Polymorphism
+13. [Static and Final Keywords](./J_13_0_StaticAndFinal.java)
+14. [Method Overriding or Dynamic Polymorphism](./J_14_0_MethodOverriding.java)
 
 ### Advanced OOP and Exception Handling
 
-15. Object Class
-16. Abstraction and Interfaces
-17. Exception Handling (Try-catch-finally, throw)
-18. Custom Exceptions (throw vs throws)
-19. Optional Class
+15. [Object Class](./J_15_0_ObjectClass.java)
+16. [Abstraction](./J_16_0_AbstractClass.java) and [Interfaces](./J_16_1_Interface.java)
+17. [Exception Handling](./J_17_0_ExceptionalHandling.java) (Try-catch-finally, throw)
+18. [Custom Exceptions](./J_18_0_CustomException.java) (throw vs throws)
+19. [Optional Class](./J_19_0_OptionalClass.java)
 
 ## Java Phase 2 : Intermediate Java
 

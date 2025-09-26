@@ -61,11 +61,3 @@ public class J_14_0_MethodOverriding extends Animal {
 		
 	}
 }
-
-
-//class Django extends J_10_MethodOverriding {
-//	
-//	public static void main(String args[]) {
-//		System.out.println("I am overridden main.");
-//	}
-//}

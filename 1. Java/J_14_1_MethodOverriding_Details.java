@@ -33,7 +33,7 @@ class Child extends Parent {
 
 
 
-public class J_12_2_Inheritance_BetterUnderstanding {
+public class J_14_1_MethodOverriding_Details {
 
     public static void main(String args[] ){
 
