@@ -19,7 +19,7 @@
 	
 */
 
-package learning;
+
 
 import java.util.concurrent.TimeUnit;
 
@@ -81,7 +81,7 @@ class WebApp2_BackEnd extends Thread{
 
 
 
-public class J_21_Thread {
+public class J_33_1_Thread {
 	
 	public static void main(String args[]) throws Exception{
 		

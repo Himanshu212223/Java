@@ -18,7 +18,7 @@ class Student {
 	public int rollNo ;
 	public String name ;
 	
-	public void setDetailsOfStudent(int r, String n) {		//	here, the arguments or parameters are called formal parameter.
+	public void setDetailsOfStudent(int r, String n) {
 		rollNo = r ;
 		name = n ;
 	}
@@ -47,7 +47,7 @@ public class J_08_0_ClassInJava {
 		int rolls = 45 ;					
 		String names = "Himanshu" ;
 		
-		student.setDetailsOfStudent(rolls, names);		//	here, the arguments or parameters are called actual parameter.
+		student.setDetailsOfStudent(rolls, names);		
 		
 		student.getDetailsOfStudent();			//	calling the method of class through object.
 		

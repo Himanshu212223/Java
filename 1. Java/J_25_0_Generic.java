@@ -8,7 +8,7 @@
 */
 
 
-class Pist<myDefined>{
+class Pist< myDefined >{
 	public myDefined[] variable1 ;
 	
 	public void adder(myDefined a) {

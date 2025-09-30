@@ -79,7 +79,7 @@ import java.io.IOException;
 */
 
 
-public class J_32_1_Working_with_XML {
+public class J_32_3_Working_with_XML {
     public static void main(String[] args) throws ParserConfigurationException, TransformerException, IOException, SAXException {
 
         // Create a DocumentBuilder

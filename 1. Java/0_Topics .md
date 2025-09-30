@@ -21,7 +21,7 @@
 9. [Different Types of Constructors](./J_09_0_DifferentTypesOfConstructors.java)
 10. [Singleton Class](./J_10_0_SingletonClass.java) and Anonymous Class
 11. [This Keyword, Getters and Setters](./J_11_0_ThisKeywordAndGetterSetters.java)
-12. [Inheritance](./J_12_0_Inheritance.java), [Super Keyword and Access Modifiers](./J_12_1_SuperKeywordAndAccessModifier.java)
+12. [Inheritance](./J_12_0_Inheritance.java), [Super Keyword and Access Modifiers](./J_12_1_SuperKeywordAndAccessModifier.java), [IS-A and HAS-A Relationship](./J_12_2_IS-A-RelationHAS-A-Relation.md)
 13. [Static and Final Keywords](./J_13_0_StaticAndFinal.java)
 14. [Method Overriding or Dynamic Polymorphism](./J_14_0_MethodOverriding.java)
 
@@ -37,25 +37,25 @@
 
 ### Collections Framework
 
-20. Collection Framework, Set, HashSet
-21. List, ArrayList, LinkedList
-22. Maps and Hashmap
-23. Iterator and Comparator
-24. Comparable in Java
+20. [Collection Framework, Set, HashSet](./J_20_0_CollectionFrameworkAndSet.java)
+21. [List, ArrayList, LinkedList](./J_21_0_List.java)
+22. [Maps and Hashmap](./J_22_0_Map_Collection.java)
+23. [Iterator and Comparator](./J_23_0_IteratorAndComparator.java)
+24. [Comparable in Java](./J_24_0_Comparable.java)
 
 ### Generics and Functional Programming
 
-25. Generic classes and methods
-26. Functional Interfaces and Lambda Expression
-27. Method Referencing
-28. Stream API Basics
+25. [Generic classes and methods](./J_25_0_Generic.java)
+26. [Functional Interfaces and Lambda Expression](./J_26_0_Functional_Interface_and_Lambda_Expression.java)
+27. [Method Referencing](./J_27_0_MethodReferencing.java)
+28. [Stream API Basics](./J_28_0_StreamAPI.java)
 
 ### File I/O & Serialization
 
-29. File Handling (Read/Write)
-30. Byte Steams vs Character Streams
-31. Object Serialization / Deserialization
-32. Working with JSON / XML
+29. [File Handling (Read/Write)](./J_29_1_CreatingTextFile.java)
+30. [Byte Steams vs Character Streams](./J_30_0_ByteStream.java)
+31. [Object Serialization / Deserialization](./J_31_0_Serialization_Deserialization.java)
+32. [Working with JSON / XML](./J_32_1_JSONusingJackson.md)
 
 ### Multi-Threading Basics
 
