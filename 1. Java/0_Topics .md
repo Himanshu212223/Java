@@ -59,34 +59,33 @@
 
 ### Multi-Threading Basics
 
-33. Thread Lifecycle
-34. Creating Threads (extends vs implements)
-35. Synchronization
-36. Thread pools (ExecutorService)
+33. [Thread Lifecycle](./J_33_0_Thread%20Lifecycle.md)
+34. [Creating Threads (extends vs implements)](./J_34_0_CreatingThread.md)
+35. [Synchronization](./J_35_0_Synchronization.md)
+36. [Thread pools (ExecutorService)](./J_36_0_ThreadPool.md)
 
 ## Java Phase 3 : Advanced Java
 
 ### Advanced Multi-Threading
 
-37. Concurrent Collections
-38. Locks and Atomic variables
-39. CompletableFuture
-40. Fork/Join Framework
+37. [Locks and Atomic variables](./J_37_0_LockAndAtomicVar.md)
+38. [Future and CompletableFuture](./J_38_0_FutureAndCompletableFuture.md)
+39. [Concurrent Collections](./J_39_0_ConcurrentCollection.md)
+40. [Fork/Join Framework](./J_40_0_ForkAndJoin.md)
 
 ### Java Memory Management
 
-41. JVM Architecture Overview
-42. Garbage Collection Mechanisms
-43. Memory Leaks Detection
-44. JVM Tuning Basics
+41. [JVM Architecture Overview](./J_41_0_JVM%20Architecture.md)
+42. [Garbage Collection Mechanisms](./J_42_0_GarbageCollectionMechanism.md)
+43. [Memory Leaks Detection](./J_43_0_MemoryLeak.md)
 
 ### Networking & JDBC
 
-45. Socket Programming
-46. HTTP Clients (HttpURLConnection, HttpClient)
-47. JDBC Basics and connection pooling
-48. Transaction Management
-49. Records and Sealed Classes
+44. [Socket Programming](./J_44_0_SocketProgramming.md)
+45. [HTTP Clients](./J_45_0_HttpClients.md) (HttpURLConnection, HttpClient)
+46. [JDBC Basics and connection pooling](./J_46_0_JDBC_Basics_ConnectionPooling.md)
+47. Transaction Management
+48. Records and Sealed Classes
 
 ### Modern Java Features
 
