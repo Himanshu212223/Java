@@ -137,3 +137,65 @@ Example 2: Using .intern() to add a string object in string constant pool.
 String internedString = demoString.intern(); 
 
 > **It is preferred to use String literals as it allows JVM to optimize memory allocation.**
+
+
+
+
+
+## CRUD Operation using String Buffer
+
+```
+StringBuffer sb = new StringBuffer();
+
+// Create
+sb.append("Hello World!");
+System.out.println("Create: " + sb);
+
+// Read
+System.out.println("Read: " + sb.toString());
+
+// Update
+sb.replace(6, 11, "Java");
+System.out.println("Update: " + sb);
+
+// Delete
+sb.delete(5, sb.length());
+System.out.println("Delete: " + sb);
+
+// Extra: Delete entire content
+sb.setLength(0);
+System.out.println("Cleared: \"" + sb + "\"");
+```
+
+
+
+
+## CRUD Operation using String Builder
+
+```
+
+StringBuilder sb = new StringBuilder();
+
+// C – Create
+sb.append("Hello World!");
+System.out.println("Create: " + sb);
+
+// R – Read
+System.out.println("Read: " + sb.toString());
+
+// U – Update
+sb.replace(6, 11, "Java");
+System.out.println("Update: " + sb);
+
+// D – Delete
+sb.delete(5, sb.length());
+System.out.println("Delete: " + sb);
+
+// Extra: Clear
+sb.setLength(0);
+System.out.println("Cleared: \"" + sb + "\"");
+
+//  Remove it through Garbage collector
+sb = null ;
+
+```

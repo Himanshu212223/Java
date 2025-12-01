@@ -8,9 +8,13 @@
  	
  	Collection Interfaces are : Set, List, Queue, Deque, Map.
  	
- 	Collection Classes are 	  : HashSet, LinkedHashSet, TreeSet, Vector, 
- 								ArrayList, LinkedList, PriorityQueue,
- 								HashMap, LinkedHashMap, TreeMap
+ 	Collection Classes are 	  :
+	For List - ArrayList, LinkedList, Vector, Stack
+	For Queue - PriorityQueue
+	For DeQueue - Array DeQueue
+	For Set - HashSet, LinkedHashSet, TreeSet
+	For Map - Hash Table, HashMap, LinkedHashMap, TreeMap
+
  								
 	Set 		: Does not contain duplicate elements.
 	SortedSet 	: Stores the data in ascending order.
