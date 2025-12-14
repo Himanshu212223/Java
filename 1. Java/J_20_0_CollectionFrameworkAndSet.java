@@ -9,18 +9,18 @@
  	Collection Interfaces are : Set, List, Queue, Deque, Map.
  	
  	Collection Classes are 	  :
-	For List - ArrayList, LinkedList, Vector, Stack
-	For Queue - PriorityQueue
-	For DeQueue - Array DeQueue
-	For Set - HashSet, LinkedHashSet, TreeSet
-	For Map - Hash Table, HashMap, LinkedHashMap, TreeMap
+	For Set 	- HashSet, LinkedHashSet, TreeSet
+	For List 	- ArrayList, LinkedList, Vector, Stack
+	For Queue 	- PriorityQueue, ArrayDequeue
+	For DeQue 	- Array DeQueue, LinkedList
+	For Map 	- HashMap, LinkedHashMap, TreeMap, HashTable, ConcurrentHashMap
 
  								
 	Set 		: Does not contain duplicate elements.
-	SortedSet 	: Stores the data in ascending order.
-	List 		: Elements are stored in order or index wise.
-	Queue 		: Typically follow FIFO order.
-	Deque 		: Can follow both FIFO or LIFO order.
+	List		: Ordered collection, allows duplicates.
+	Queue		: FIFO Order usually.
+	Deque		: Double-ended queue.
+	Map			: Key-Value pairs, keys should be unique (no duplicate).
 	
 	
 	
@@ -29,9 +29,9 @@
 	
 	- Set is unordered collection of unique elements.
 	- Set Interface can have 3 different classes as, HashSet, LinkedHashSet, and TreeSet.
-	- HashSet stores data in such a format that nobody can explain.
-	- TreeSet stores data in sorted ascending order.
-	- LinkedHashSet stores data in order of insertion of data.
+	- HashSet 		:- No Order maintained, fast lookup.
+	- LinkedHashSet :- Maintains insertion order.
+	- TreeSet		:- Sorted order, slower than HashSet.
  */
 
 
