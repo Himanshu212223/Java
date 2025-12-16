@@ -16,13 +16,16 @@ next() → returns the next element.
 
 remove() → removes the last element returned by next().
 
+Remember --> You cannot reset the iterator.
+meaning - Iterator is one-way (forward only) so once iterator moved to next value it can't come back to previous one.
+
 
 Comparator in Java - 
 ________________________________________________________________
 
 - Comparator is an interface in Java.
 
-- It is used to define a custom sorting order for objects.
+- It is used to define a custom sorting logics for objects outside of class.
 
 - You implement compare(T o1, T o2) method:
 
@@ -40,6 +43,7 @@ and define the custom methods.
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Vector;
 import java.util.Iterator;
 import java.util.ArrayList;
 import java.util.Collections;
@@ -55,12 +59,31 @@ class Student {
     }
 }
 
+
+
+
+
+
 class AgeComparator implements Comparator<Student> {
     @Override
     public int compare(Student s1, Student s2) {
         return Integer.compare(s1.age, s2.age); // sort by age ascending
     }
 }
+
+//  Another Exaple of Comparator for Vectors
+class VectorComparator implements Comparator<Integer>{
+    @Override
+    public int compare(Integer int1, Integer int2){
+        return int2 - int1;         //   For Descending Order
+        // for Ascending, use --> return int1 - int2 ;
+    }
+}
+
+
+
+
+
 
 public class J_23_0_IteratorAndComparator {
 
@@ -104,6 +127,36 @@ public class J_23_0_IteratorAndComparator {
 
         iteratorCodeExample();
         comparatorCodeExample();
+
+
+        
+
+
+
+
+        Vector<Integer> vector = new Vector<>();
+
+        vector.add(34);
+        vector.add(56);
+        vector.add(2);
+        vector.add(98);
+
+        Iterator<Integer> itr = vector.iterator();
+
+
+        while(itr.hasNext()){
+            System.out.println(itr.next());
+        }
+
+        Collections.sort(vector, new VectorComparator());
+
+        Iterator<Integer> itr2 = vector.iterator();
+
+        while(itr2.hasNext()){
+            System.out.println(itr2.next());
+        }
+        
+        
 
     }
 

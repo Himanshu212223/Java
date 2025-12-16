@@ -10,7 +10,7 @@
 
 ### Core Programming Concepts
 
-4. Arrays and Strings
+4. Arrays and [Strings](./J_04_String.md)
 5. [Methods and Method Overloading - Static Polymorphism](./J_05_0_MethodOverloading.java)
 6. [Variable Argument Methods](./J_06_0_VariableArgumentMethod.java)
 7. [Introduction to OOP concepts](./J_07_0_Introduction%20to%20OOPs.md)
