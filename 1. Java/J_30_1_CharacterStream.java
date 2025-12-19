@@ -2,7 +2,7 @@
 	Character Stream
 	____________________________________________________
 	
-	Byte Stream - 
+	Character Stream - 
 	----------------------------------------
 
 	- A Character Stream in Java is used to perform input and 

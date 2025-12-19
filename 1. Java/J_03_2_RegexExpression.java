@@ -113,7 +113,7 @@ public class J_03_2_RegexExpression {
 			String statement33 = "User Name" ;
 			System.out.println(statement33 + " is " + statement33.matches(regex13)) ;
 			
-			String regex14ForEmail = "([A-z]*[a-z]*){1,}[@][a-z]*[.][a-z]*" ;
+			String regex14ForEmail = "[([a-z]*)([A-Z]*)]+[@]([a-z]{1,}[A-Z]*)[.]([a-z]{1,}[A-Z]*)" ;
 			String statement34 = "Acb@gmail.com" ;
 			System.out.println(statement34 + " is " + statement34.matches(regex14ForEmail));
 			
